@@ -4,7 +4,7 @@
 */
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -41,6 +41,9 @@ body {
 ol, ul {
 	list-style: none;
 }
+li {
+	margin-bottom: 0.5svh;
+}
 blockquote, q {
 	quotes: none;
 }
@@ -52,4 +55,60 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 100svh;
+}
+.content {
+	width: 100%;
+	margin-bottom: auto;
+
+}
+.containers {
+	display: grid;
+	padding-top: 5svh;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.container {
+	min-height: 5svh;
+	min-width: 5svh;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.container-top {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 2svh;
+}
+
+.todo-list li {
+    position: relative; /* Needed for absolute positioning */
+    padding-right: 2rem; /* Space for delete button */
+    cursor: pointer; /* Indicates clickable items */
+}
+
+
+.todo-list li::after {
+    content: 'X'; /* The delete button */
+    font-size: 1.2rem;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none; /* Remove background */
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
+    pointer-events: auto; 
 }

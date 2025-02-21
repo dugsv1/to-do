@@ -6,6 +6,39 @@
     <title>Static site template</title>
 </head>
 <body>
-
+    <nav>
+        <h1>Projects and Todos</h1>
+    </nav>
+    <div class="content">
+        <label for="project-input">Create a new project?</label>
+        <input type="text" name="project-input" id="project-input">
+        <button class="create-project" type="submit">Submit</button>
+        <div class="containers">
+            <div class="container">
+                <div class="container-top">
+                    <h2 class="project-title">Project Name</h2>
+                    <button class="del-btn">Delete</button>
+                </div>
+                <form>
+                    <fieldset>
+                        <legend>Add an item</legend>
+                        <label for="new-todo">Enter a new to do item</label>
+                        <input type="text" name="new-todo" id="new-todo">
+                        <button class="add-todo" type="submit">Add</button>
+                    </fieldset>
+                </form>
+                <ul class="todo-list">
+                    <li class="list-item1 list-item">Item1</li>
+                    <li class="list-item2 list-item">Item1</li>
+                    <li class="list-item3 list-item">Item1</li>
+                </ul>
+            </div>
+            <div class="container"></div>
+            <div class="container"></div>
+        </div>
+    </div>
+    <footer>
+        An odin project
+    </footer>
 </body>
 </html>
