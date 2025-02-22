@@ -23,7 +23,7 @@ export function createCard(){
         }
     });
 
-    containerTop.addEventListener('click', (e) => {
+    containerTop.addEventListener('click', () => {
         const nearestContainer = containerTop.closest(".container")
         nearestContainer.remove()
     })

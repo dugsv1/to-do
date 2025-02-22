@@ -3,7 +3,6 @@ import "./style.css";
 import { createCard } from "./cards";
 
 const addProjectButton = document.querySelector('.create-project')
-const containers = document.querySelector('.containers')
 addProjectButton.addEventListener('click', addNewProject)
 
 class Project{
