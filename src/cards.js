@@ -23,6 +23,11 @@ export function createCard(){
         }
     });
 
+    containerTop.addEventListener('click', (e) => {
+        const nearestContainer = containerTop.closest(".container")
+        nearestContainer.remove()
+    })
+
     container.appendChild(containerTop)
     container.appendChild(form)
     container.appendChild(ul)
