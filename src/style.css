@@ -73,7 +73,7 @@ body {
 	padding-top: 5svh;
 	padding-left: 2svh;
 	padding-right: 2svh;
-	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(500px, 0.45fr));
 	gap: 2rem
 }
 .container {
